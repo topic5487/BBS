@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
-
+                  @include('shared._errors')
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -62,7 +62,14 @@
                         </div>
 
                         <div class="row mb-0">
+
                             <div class="col-md-6 offset-md-4">
+                                <div class="form-group row {{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }} ">
+                                    <div class="col-md-3" style="">
+                                        {!! app('captcha')->display() !!}
+                                    </div>
+                                </div>
+                                <hr>
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
