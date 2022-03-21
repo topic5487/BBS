@@ -39,3 +39,6 @@ Route::post('password/confirm', 'Auth\ConfirmPasswordController@confirm');
 Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
 Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+
+//顯示、編輯個人資料
+Route::resource('users', 'UserController', ['only'=> ['show', 'update', 'edit']]);
