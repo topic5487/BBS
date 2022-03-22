@@ -7,16 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 
-class TopicsController extends Controller
+class TopicController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index()
-	{
-		$topics = Topic::with('user', 'category')->paginate(15);
+	public function index(Request $request, Topic $topic)
+	{   //$request->order用於獲取URI中的order?參數
+		$topics = $topic->Order($request->order)->with('user', 'category')->paginate(15);
 		return view('topics.index', compact('topics'));
 	}
 
@@ -57,4 +57,5 @@ class TopicsController extends Controller
 
 		return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
 	}
+
 }

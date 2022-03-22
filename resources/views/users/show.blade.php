@@ -29,11 +29,15 @@
       <hr>
 
       {{-- 用戶發佈內容 --}}
-      <div class="card ">
-        <div class="card-body">
-          暫無資料
-        </div>
+      <div class="card">
+      <div class="card-body">
+        <ul class="nav nav-tabs">
+          <li class="nav-item"><a class="nav-link active bg-transparent" href="#">文章</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">回覆</a></li>
+        </ul>
+        @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
       </div>
+    </div>
 
     </div>
   </div>
