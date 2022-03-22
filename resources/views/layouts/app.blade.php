@@ -14,6 +14,8 @@
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
+  @yield('styles')
+
 </head>
 
 <body>
@@ -37,6 +39,7 @@
   <script src="{{ mix('js/app.js') }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	 {!! NoCaptcha::renderJs() !!}
+    @yield('scripts')
 </body>
 
 </html>

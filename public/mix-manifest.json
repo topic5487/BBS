@@ -1,4 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/js/hotkeys.js": "/js/hotkeys.js",
+    "/js/module.js": "/js/module.js",
+    "/js/simditor.js": "/js/simditor.js",
+    "/js/uploader.js": "/js/uploader.js",
+    "/css/simditor.css": "/css/simditor.css"
 }
