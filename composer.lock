@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "167866578cda2832aa445e10835cab52",
+    "content-hash": "5994cd585ac40a449c8b53ef085ee8ae",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -959,16 +959,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "2.7.1",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "744ebba495319501b873a4e48787759c72e3fb8c"
+                "reference": "9a8cc99d30415ec0b3f7649e1647d03a55698545"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/744ebba495319501b873a4e48787759c72e3fb8c",
-                "reference": "744ebba495319501b873a4e48787759c72e3fb8c",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/9a8cc99d30415ec0b3f7649e1647d03a55698545",
+                "reference": "9a8cc99d30415ec0b3f7649e1647d03a55698545",
                 "shasum": ""
             },
             "require": {
@@ -1027,7 +1027,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/2.7.1"
+                "source": "https://github.com/Intervention/image/tree/2.7.0"
             },
             "funding": [
                 {
@@ -1039,7 +1039,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-16T16:49:26+00:00"
+            "time": "2021-10-03T14:17:12+00:00"
         },
         {
             "name": "laravel-lang/lang",

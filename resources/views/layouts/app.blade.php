@@ -10,6 +10,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', 'BBS')</title>
+  <meta name="description" content="@yield('description','BBS社區')" />
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -38,8 +39,8 @@
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	 {!! NoCaptcha::renderJs() !!}
-    @yield('scripts')
+  {!! NoCaptcha::renderJs() !!}
+  @yield('scripts')
 </body>
 
 </html>

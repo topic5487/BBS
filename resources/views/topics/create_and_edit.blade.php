@@ -48,7 +48,7 @@
           </div>
 
           <div class="well well-sm">
-            <button type="submit" class="btn btn-primary"><i class="far fa-save mr-2" aria-hidden="true"></i>保存</button>
+            <button type="submit" class="btn btn-primary"><i class="far fa-save mr-2" aria-hidden="true"></i>發佈文章</button>
           </div>
           </form>
         </div>
@@ -71,6 +71,18 @@
     $(document).ready(function() {
       var editor = new Simditor({
         textarea: $('#editor'),
+        upload: {
+          url: '{{ route('topics.upload_image') }}',
+          params: {
+            _token: '{{ csrf_token() }}'
+          },
+          fileKey: 'upload_file',
+          //最多只能同時上傳3張圖
+          connectionCount: 3,
+          leaveConfirm: '圖片上傳中，關閉將取消上傳'
+        },
+        //支援圖片複製貼上上傳
+        pasteImage: true,
       });
     });
   </script>

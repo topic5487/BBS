@@ -3,11 +3,10 @@
 namespace App\Handlers;
 
 use Intervention\Image\Facades\Image;
-use  Illuminate\Support\Str;
+use Illuminate\Support\Str;
 
 class ImageUploadHandler
 {
-    // 只允許這些檔名上傳
     protected $allowed_ext = ["png", "jpg", "gif", 'jpeg'];
 
     public function save($file, $folder, $file_prefix, $max_width = false)

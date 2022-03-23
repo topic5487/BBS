@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
-
+use App\Handlers\ImageUploadHandler;
 
 class TopicController extends Controller
 {
@@ -64,4 +64,22 @@ class TopicController extends Controller
 		return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
 	}
 
+    //文章上傳圖片
+    public function uploadImage(Request $request, ImageUploadHandler $uploader){
+        $data = [
+            'success'   => false,
+            'msg'       => '上傳失敗',
+            'file_path' => ''
+        ];
+
+        if ($file = $request->upload_file) {
+            $result = $uploader->save($file, 'topics', Auth::id(), 1024);
+            if ($result) {
+                $data['file_path'] = $result['path'];
+                $data['msg']       = "上傳成功";
+                $data['success'] = true;
+            }
+        }
+        return $data;
+    }
 }
