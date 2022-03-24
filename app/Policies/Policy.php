@@ -13,10 +13,10 @@ class Policy
         //
     }
 
-    public function before($user, $ability)
-	{
-	    // if ($user->isSuperAdmin()) {
-	    // 		return true;
-	    // }
-	}
+    public function before($user, $ability){
+        //如果用戶擁有管理內容的權限，即授權通過
+	    if ($user->can('manage_contents')) {
+            return true;
+	    }
+    }
 }

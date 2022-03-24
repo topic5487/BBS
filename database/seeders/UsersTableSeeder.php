@@ -22,5 +22,8 @@ class UsersTableSeeder extends Seeder
         $user->email = 'Hank@example.com';
         $user->avatar = 'https://www.pimiss.com/wp-content/uploads/2021/10/2-44.jpg';
         $user->save();
+        $user->assignRole('Founder');
+        $user = User::find(2);
+        $user->assignRole('Maintainer');
     }
 }
