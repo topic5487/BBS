@@ -32,12 +32,24 @@
       <div class="card">
       <div class="card-body">
         <ul class="nav nav-tabs">
-          <li class="nav-item"><a class="nav-link active bg-transparent" href="#">文章</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">回覆</a></li>
+          <li class="nav-item"><a class="nav-link bg-transparent {{ active_class(if_query('tab', null)) }}"
+            href="{{ route('users.show', $user->id) }}">文章</a></li>
+          <li class="nav-item"><a class="nav-link bg-transparent {{ active_class(if_query('tab', 'replies')) }}"
+            href="{{ route('users.show', [$user->id, 'tab' => 'replies']) }}">回覆</a></li>
         </ul>
-        @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
-      </div>
-    </div>
+
+        @if (if_query('tab', 'replies'))
+            @include('users._replies', [
+                'replies' => $user->replies()->with('topic')->recent()->paginate(5),
+            ])
+          @else
+            @include('users._topics', [
+                'topics' => $user->topics()->recent()->paginate(5),
+            ])
+          @endif
+
+       </div>
+     </div>
 
     </div>
   </div>
