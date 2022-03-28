@@ -18,6 +18,13 @@ return array(
     'menu' => [
         '用戶與權限' => [
             'users',
+            'roles',
+            'permissions',
+        ],
+        '内容管理' => [
+            'categories',
+            'topics',
+            'replies',
         ],
     ],
 
