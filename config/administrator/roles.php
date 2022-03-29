@@ -18,7 +18,7 @@ return [
             'title' => 'ID',
         ],
         'name' => [
-            'title' => '標示'
+            'title' => '名稱'
         ],
         'permissions' => [
             'title'  => '權限',
@@ -44,7 +44,7 @@ return [
 
     'edit_fields' => [
         'name' => [
-            'title' => '標示',
+            'title' => '名稱',
         ],
         'permissions' => [
             'type' => 'relationship',
@@ -58,7 +58,7 @@ return [
             'title' => 'ID',
         ],
         'name' => [
-            'title' => '標示',
+            'title' => '名稱',
         ]
     ],
 
@@ -69,7 +69,7 @@ return [
 
     // 表單驗證錯誤時的訊息
     'messages' => [
-        'name.required' => '請輸入標示',
-        'name.unique' => '標示已經存在',
+        'name.required' => '請輸入名稱',
+        'name.unique' => '名稱已經存在',
     ]
 ];

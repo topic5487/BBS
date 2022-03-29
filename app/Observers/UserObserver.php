@@ -9,13 +9,10 @@ use App\Models\User;
 
 class UserObserver
 {
-    public function creating(User $user)
-    {
-        //
-    }
-
-    public function updating(User $user)
-    {
-        //
+    public function saving(User $user){
+        if(empty($user->avatar)){
+            $user->avatar =
+            'https://img.tukuppt.com/png_preview/00/39/87/bMmr3S2MCC.jpg!/fw/780';
+        }
     }
 }

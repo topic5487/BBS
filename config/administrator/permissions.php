@@ -33,7 +33,7 @@ return [
             'title' => 'ID',
         ],
         'name' => [
-            'title'    => '標示',
+            'title'    => '名稱',
         ],
         'operation' => [
             'title'    => '管理',
@@ -43,9 +43,7 @@ return [
 
     'edit_fields' => [
         'name' => [
-            'title' => '標示（請慎重修改）',
-
-            'hint' => '修改權限標識會影響代碼的調用，請不要輕易更改。'
+            'title' => '名稱（請謹慎修改）',
         ],
         'roles' => [
             'type' => 'relationship',
@@ -56,7 +54,7 @@ return [
 
     'filters' => [
         'name' => [
-            'title' => '標示',
+            'title' => '名稱',
         ],
     ],
 ];
