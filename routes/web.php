@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@root')->name('root');
+Route::get('/', 'TopicController@index')->name('root');
 
 //用戶身份認證相關
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
