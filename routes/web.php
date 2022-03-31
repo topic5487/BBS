@@ -34,3 +34,10 @@ Route::resource('replies', 'ReplyController', ['only' => ['store', 'destroy']]);
 
 //通知列表
 Route::resource('notifications', 'NotificationController', ['only' => ['index']]);
+
+//將用戶重新導向至OAuth提供程序
+Route::get('login/github', 'SocialController@redirectToProvider');
+
+//在身份驗證之後接收來自提供程序的回調。
+Route::get('login/github/callback', 'SocialController@handleProviderCallback');
+Auth::routes(['verify' => true]);
