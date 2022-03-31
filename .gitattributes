@@ -1,6 +1,2 @@
-* text=auto
-
+* linguist-vendored
 *.php linguist-vendored=false
-
-/.github export-ignore
-CHANGELOG.md export-ignore
