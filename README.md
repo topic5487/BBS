@@ -51,3 +51,27 @@
 9. Simditor更美觀好用的編輯器
 10. Laravel-permission管理權限需求
 
+主頁
+![](https://github.com/topic5487/BBS/blob/main/images/bbs.jpg)
+
+文章分類
+![](https://github.com/topic5487/BBS/blob/main/images/bbs1.jpg)
+
+新增文章
+![](https://github.com/topic5487/BBS/blob/main/images/bbs2.jpg)
+
+通知功能
+![](https://github.com/topic5487/BBS/blob/main/images/bbs3.jpg)
+
+個人頁面
+![](https://github.com/topic5487/BBS/blob/main/images/bbs4.jpg)
+
+編輯資料
+![](https://github.com/topic5487/BBS/blob/main/images/bbs5.jpg)
+
+如果用戶權限是管理員則可進入後台
+    
+![](https://github.com/topic5487/BBS/blob/main/images/bbs6.jpg)
+
+後台頁面
+![](https://github.com/topic5487/BBS/blob/main/images/bbs7.jpg)
